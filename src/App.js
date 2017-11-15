@@ -59,7 +59,7 @@ class App extends Component {
           <TextContainer
           fontColor={this.state.fontColor}
           fontSize={this.state.fontSize}
-          fontFamily={this.state.fontSize}
+          fontFamily={this.state.fontFamily}
           />
         </div>
       </div>
