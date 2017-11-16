@@ -1,5 +1,15 @@
 <img src="https://devmounta.in/img/logowhiteblue.png" width="250" align="right">
 
+
+What I learned
+* event.target.value: you pass an event into an HTML class by using JavaScript inside of your HTML, JSX; also, typo multiple times: I was writing event.value.target - WRONG! I had to read through the componnents a couple of times to see what was wrong
+* lifecycle method: <code>componentWillReceiveProps</code>. They actually don't go into the 'what' of this lifecycle method, so I'll add some supplemental information here
+  - this method is invoked before the component actually receives the props
+  - React doesn't call this method with initial props upon mounting - it only calls it if some of the components props may update
+* Bind: there are multiple ways you can bind the context of a method, the one we use here is binding 'this' to the method in the constructor function contained in the CLASS. These are event handlers that are defined as methods on the class. We have to do this because of context in JavaScript; callback functions reset the context of 'this' so if you don't bind it to the class, it will return 'undefined'
+* Props: props is an object that is passed down from a parent component to a child component - the child component is the one that is rendered inside of another(parent) component. NOTES: Props are read-only, you can never alter/change them. So because props are read-only and immuatable we utilize state to track any state changes and 'pass' information back up to the parent component - more on this later
+* 
+
 # Project Summary
 
 In this project we will create an application that can change the theme of a paragraph real-time using elements on the front-end. We will also create a switch that can enable and disable the ability to change the theme of the paragraph. In the process of creating this project, we will cover how to use `this`, `bind`, `state`, `props`, and `componentWillReceiveProps`.

@@ -8,8 +8,13 @@ export default class SizeChanger extends Component {
     };
   }
 
-  // componentWillReceiveProps
-
+  // react doesn't call this method upon mounting, it only calls it
+  // if props are changed/passed down from the parent
+  componentWillReceiveProps(props) {
+    this.setState({allowEdit: props.allowEdit})
+  }
+// this.props.update comes from the parent component, it is passed down
+// to this child component by the props object
   render() {
     return (
       <select 

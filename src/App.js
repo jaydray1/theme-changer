@@ -17,7 +17,7 @@ class App extends Component {
       fontFamily: 'monospace',
       allowEdit: 'true'
     }
-
+// we need to bind 'this' to the context of the class 
     this.updateSize = this.updateSize.bind(this);
     this.updateColor = this.updateColor.bind(this);
     this.updateFamily = this.updateFamily.bind(this);
@@ -44,7 +44,8 @@ class App extends Component {
     return (
       <div>
         <div className="headerBar">
-          <EditToggle update={this.updateEditStatus} />
+          <EditToggle 
+          update={this.updateEditStatus} />
           <ColorChanger 
           update={this.updateColor} 
           allowEdit={this.state.allowEdit}/>
